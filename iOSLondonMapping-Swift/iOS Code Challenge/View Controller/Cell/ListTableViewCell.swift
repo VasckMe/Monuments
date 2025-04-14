@@ -2,7 +2,6 @@
 //  ListTableViewCell.swift
 //  iOS Code Challenge
 //
-//  Created by Anton Kasaryn on 14/04/2025.
 //  Copyright © 2025 Geektastic. All rights reserved.
 //
 
