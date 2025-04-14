@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A77233E2DAD294B005928E7 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A77233D2DAD294B005928E7 /* ListTableViewCell.swift */; };
+		7A7723412DAD2A12005928E7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7A7723402DAD2A12005928E7 /* SnapKit */; };
 		C9AB9C28214D9DBB008E360F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB9C27214D9DBB008E360F /* AppDelegate.swift */; };
 		C9AB9C2F214D9DBC008E360F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AB9C2E214D9DBC008E360F /* Assets.xcassets */; };
 		C9AB9C32214D9DBC008E360F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AB9C30214D9DBC008E360F /* LaunchScreen.storyboard */; };
@@ -21,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A77233D2DAD294B005928E7 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		C9AB9C24214D9DBB008E360F /* iOS Code Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Code Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AB9C27214D9DBB008E360F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9AB9C2E214D9DBC008E360F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A7723412DAD2A12005928E7 /* SnapKit in Frameworks */,
 				C9AB9C40214D9FE4008E360F /* MapKit.framework in Frameworks */,
 				C9AB9C3E214D9FDF008E360F /* CoreLocation.framework in Frameworks */,
 			);
@@ -50,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A77233B2DAD291D005928E7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7A77233D2DAD294B005928E7 /* ListTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		C9AB9C1B214D9DBB008E360F = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +107,7 @@
 		C9AB9C41214DA040008E360F /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7A77233B2DAD291D005928E7 /* Cell */,
 				C9AB9C44214DA0C4008E360F /* MapViewController.swift */,
 				C9AB9C46214DA0E1008E360F /* ListViewController.swift */,
 			);
@@ -162,6 +175,9 @@
 				Base,
 			);
 			mainGroup = C9AB9C1B214D9DBB008E360F;
+			packageReferences = (
+				7A77233F2DAD2A12005928E7 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = C9AB9C25214D9DBB008E360F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -189,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A77233E2DAD294B005928E7 /* ListTableViewCell.swift in Sources */,
 				C9AB9C49214DA2FA008E360F /* Monument.swift in Sources */,
 				C9AB9C28214D9DBB008E360F /* AppDelegate.swift in Sources */,
 				C9AB9C45214DA0C4008E360F /* MapViewController.swift in Sources */,
@@ -390,6 +407,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A77233F2DAD2A12005928E7 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A7723402DAD2A12005928E7 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A77233F2DAD2A12005928E7 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C9AB9C1C214D9DBB008E360F /* Project object */;
 }

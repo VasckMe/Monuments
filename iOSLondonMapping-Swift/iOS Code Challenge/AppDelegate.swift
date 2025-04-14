@@ -11,10 +11,34 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    lazy var tabBarController: UITabBarController = {
+        let tabBarController = UITabBarController()
+        
+        let mapView = MapViewController()
+        mapView.title = "Map"
+        mapView.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
+
+
+        let listView = ListViewController()
+        listView.title = "List"
+        listView.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 0)
+        
+        let controllers = [mapView, listView]
+        tabBarController.viewControllers = controllers
+        
+        tabBarController.view.backgroundColor = .white
+        
+        return tabBarController
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let viewController = tabBarController
+        
+        self.window?.rootViewController = viewController
+        self.window?.makeKeyAndVisible()
         return true
     }
 

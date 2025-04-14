@@ -7,11 +7,15 @@
 
 import Foundation
 
-struct Monument {
+struct MonumentResponse: Decodable {
+    let monuments: [Monument]
+}
+
+struct Monument: Decodable {
     
     let name: String
     let location: String
-    let latitude: Float
-    let longitude: Float
+    let latitude: String
+    let longitude: String
     
 }

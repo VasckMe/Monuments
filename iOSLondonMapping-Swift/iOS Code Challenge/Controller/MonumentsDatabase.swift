@@ -22,7 +22,21 @@ class MonumentsDatabase {
     }
     
     func loadMounments(completion: @escaping ([Monument]) -> Void) {
-        // Parse monuments from Monuments.json and return an array
-    }
+        guard
+            let bundlePath = Bundle.main.path(forResource: "Monuments", ofType: "json"),
+            let optionalJsonData = try? String(contentsOfFile: bundlePath).data(using: .utf8),
+            let jsonData = optionalJsonData
+                
+        else {
+            return
+        }
+        
+        guard let response = try? JSONDecoder().decode(MonumentResponse.self, from: jsonData) else {
+            return
+        }
+        
+        monuments = response.monuments
 
+        completion(response.monuments)
+    }
 }
